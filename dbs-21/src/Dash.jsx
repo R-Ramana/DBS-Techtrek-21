@@ -6,7 +6,7 @@ import logo from './logo.svg';
 const Card = ({ image, title, budget,listOfDesti }) => (
   <div className="card" onClick={() => NavigationPreloadManager}>
     <div className="card-image-container">
-      <img src={image} alt={title} className="card-image" />
+      <img src={`${title}.jpg`} alt={title} className="card-image" />
     </div>
     <div className="card-description">
       <h3 className="card-title">Iternary Title :  {title}</h3>
@@ -31,7 +31,7 @@ const Dashboard = ({ cards }) => (
 // Sample data for the dashboard
 const cardsData = [
   {
-    image: 'iternary1.jpg',
+    image: 'e.jpg',
     title: 'Singapore',
     budget: '$50',
     listOfDesti: 'gardens by the bay, mbs',
