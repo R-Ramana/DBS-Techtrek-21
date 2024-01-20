@@ -33,6 +33,8 @@ app.get("/register", async(req, res) => {
     return res.status(200).json({ user });
 })
 
+
+
 // app.post("/login", async(req, res) => {
 //     // TO auth user
 //     const username = req.body.username;
@@ -61,6 +63,44 @@ app.get("/register", async(req, res) => {
 
 // db.sequelize.sync().then(() => {
 // });
+
+// Itinerary
+
+app.get("/itinerary/:id", async(req, res) => {
+    try {
+        const id = req.params.id
+        let { data: itinerary, error } = await supabase
+            .from('itinerary')
+            .select('*')
+            .eq('user_id', id);
+        console.log("Start")
+        console.log(itinerary)
+        return res.status(200).json({ itinerary });
+        
+    } catch (error) {
+        console.log(error.message)
+        res.status(500).send("Server Error");
+    }
+})
+
+app.post("/itinerary/:id", async(req, res) => {
+    try {
+        const id = req.params.id
+        const itineraryItems = req.body.itineraryItems
+        const { data, error } = await supabase
+            .from('itinerary')
+            .insert(itineraryItems);
+        if (error) {
+            throw error;
+        }
+        return res.status(200).json(data);
+    } catch (error) {
+        console.log(error.message)
+        res.status(500).send("Server Error");
+    }
+})
+
+
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`);
