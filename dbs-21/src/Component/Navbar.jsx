@@ -1,5 +1,6 @@
 import React from 'react';
-import './Navbar.css'
+import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 function NavBar (){
     return(
@@ -9,7 +10,7 @@ function NavBar (){
                     HOME
                 </a>
                 <form className = 'login-component' action="/login-page">
-                    <button className = 'login-button'>Log in</button>
+                    <Link className = 'login-button' to="/login">Log in</Link>
                     <button className = 'login-button'>Register</button>
                     <button className = 'login-button'>Log out</button>
                 </form>
