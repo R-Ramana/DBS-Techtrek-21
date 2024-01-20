@@ -4,6 +4,8 @@ import './App.css';
 import NavBar from './Component/Navbar.jsx';
 import Dashboard from './Dashboard/Dashboard.jsx';
 import CreateIt from './Dashboard/CreateIt.jsx';
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path = '/' element = {<CreateIt/>}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
     </BrowserRouter>
   </div>
