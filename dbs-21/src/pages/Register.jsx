@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, redirect } from "react-router-dom";
+import "../css/Register.css";
 import axios from "axios";
 
 const Register = () => {
