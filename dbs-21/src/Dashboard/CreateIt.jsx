@@ -4,7 +4,8 @@ import './CreateIt.css';
 
 const CreateIt=()=>{
     const [itData, setItData] = useState({
-        'country_id':'',
+        'country_id':1,
+        'user_id':1,
         'budget':'',
         'title':'',
       });
@@ -33,23 +34,25 @@ const CreateIt=()=>{
         console.log(itData)
     
         try {
-          const response = await fetch('http://localhost:3000/api/insuranceclaims', {
+          const response = await fetch('http://localhost:3001/itinerary/1', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
+              apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt2aGhpYXl1emtwc2p4dnp1dnZsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDU3MDg2MDksImV4cCI6MjAyMTI4NDYwOX0.cyhiinfoCYzCCx0IX6ns8Spcs2UOy7WR-W95aqHJqUE",
+              Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt2aGhpYXl1emtwc2p4dnp1dnZsIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNTcwODYwOSwiZXhwIjoyMDIxMjg0NjA5fQ.eOaqXI8bq6KgtlC8m2WgMD3QllcWQJF2cFlN3mn1UxU"
             },
             body: JSON.stringify(itData),
           });
     
           if (response.ok) {
-            console.log('Claim data submitted successfully!');
+            console.log('itinerary data submitted successfully!');
             // You can perform additional actions upon successful submission
           } else {
-            console.error('Failed to submit claim data.');
+            console.error('Failed to submit itinerary data.');
             // Handle the error as needed
           }
         } catch (error) {
-          console.error('Error submitting claim data:', error);
+          console.error('Error submitting itinerary data:', error);
           // Handle the error as needed
         }
       };

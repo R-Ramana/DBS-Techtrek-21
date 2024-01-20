@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, redirect } from "react-router-dom";
 import "../css/Register.css";
 import axios from "axios";
@@ -52,7 +52,23 @@ const Register = () => {
     }
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    const data = {
+      fname: firstName,
+      lname: lastName,
+      pw: password,
+      username: username,
+    };
+    axios
+      .post("http://localhost:3001/register", data)
+      .then(() => {
+        alert("Account created successfully");
+      })
+      .catch((err) => {
+        alert("something went wrong");
+        console.log(err);
+      });
+  };
 
   return (
     <div className="registerContainer">
@@ -88,12 +104,14 @@ const Register = () => {
           name="confirmPassword"
           onChange={handleConfirmPasswordChange}
         ></input>
-        <button type="submit">Register</button>
-        <p>
-          Already a member?
-          <Link to="/login">Login Here</Link>
-        </p>
+        <button className="btn" type="submit" onClick={handleSubmit}>
+          Register
+        </button>
       </form>
+      <p>
+        Already a member?
+        <Link to="/login">Login Here</Link>
+      </p>
     </div>
   );
 };

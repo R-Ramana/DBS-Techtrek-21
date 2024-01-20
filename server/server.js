@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import morgan from 'morgan'
 import cors from 'cors';
 import bodyParser from "body-parser";
-import cors from 'cors';
+
 
 const supabaseUrl = 'https://kvhhiayuzkpsjxvzuvvl.supabase.co'
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt2aGhpYXl1emtwc2p4dnp1dnZsIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNTcwODYwOSwiZXhwIjoyMDIxMjg0NjA5fQ.eOaqXI8bq6KgtlC8m2WgMD3QllcWQJF2cFlN3mn1UxU"
