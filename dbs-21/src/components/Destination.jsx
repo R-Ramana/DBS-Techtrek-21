@@ -12,6 +12,7 @@ const Destination = ({destination, onDelete,onEdit}) => {
       };
   return (
     <div className='destination-card'>
+        <img className="destination-image" src='/img/MBS.jpg'/>
         <div className = "content">
             <h2> Name: {destination.name} </h2>
             <h2> Budget: $ {destination.cost} </h2>
