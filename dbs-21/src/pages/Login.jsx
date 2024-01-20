@@ -28,9 +28,7 @@ const Login = () => {
         name="password"
         onChange={handlePasswordChange}
       ></input>
-      <button type="submit" onClick={loginBtn}>
-        Login
-      </button>
+      <button type="submit">Login</button>
       <p>
         Not a member?
         <Link to="/register">Register Here</Link>

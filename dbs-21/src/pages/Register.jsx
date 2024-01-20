@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Register = () => {
@@ -20,7 +21,13 @@ const Register = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-  const handleConfirmPasswordChange = () => {};
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const validatePasswords = () => {};
+
+  const handleSubmit = () => {};
 
   return (
     <div>
