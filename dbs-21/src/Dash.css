@@ -13,11 +13,12 @@
   .card {
     border: 1px solid #ddd;
     border-radius: 10px;
-    width: 250px;
+    width: 350px;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     background-color: #fff; /* card background color */
+    height:200px;
   }
   
   .card:hover {

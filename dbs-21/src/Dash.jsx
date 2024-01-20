@@ -1,9 +1,10 @@
 import React from 'react';
-import './Dash.css'; // Make sure to import the CSS file
-
+import './Dash.css'; // Make sure to import the CSS f
+// import { useNavigate } from 'react-router-dom';
 // Card component
+import logo from './logo.svg';
 const Card = ({ image, title }) => (
-  <div className="card">
+  <div className="card" onClick={() => NavigationPreloadManager}>
     <div className="card-image-container">
       <img src={image} alt={title} className="card-image" />
     </div>
@@ -57,6 +58,7 @@ const cardsData = [
 
 // Main App component
 const Iternaries = () => (
+  
   <div className="app">
     <h1>My Iternaries</h1>
     <Dashboard cards={cardsData} />
