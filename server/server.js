@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 
 app.use(morgan('combined'));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const PORT = 3001;
@@ -23,14 +23,47 @@ app.get("/", (req, res) => {
     res.send("hello world");
 });
 
-app.get("/register", async(req, res) => {
+app.post("/register", async(req, res) => {
+    try {
+        const username = req.body.username
+        const lname = req.body.lname
+        const fname = req.body.fname
+        const pw = req.body.pw
+        let { data: user, error } =
+        await supabase
+            .from('user')
+            .select('*')
+            .eq('username', username)
+        if (error) {
+            console.log(error.message)
+            throw error
+        }
+        console.log(user)
+        if (user.length == 0) {
+            try {
+                console.log("inserting data")
+                const { data, error } = await supabase
+                    .from('user')
+                    .insert([
+                        { first_name: fname, last_name: lname, username: username, password: pw },
+                    ])
+                    .select()
+                console.log('data added')
+                return res.status(200);
+                if (error) {
+                    console.log(error.message)
+                    throw error
+                }
+            } catch (error) {
+                console.log(error.message)
+            }
 
-    let { data: user, error } = await supabase
-    .from('user')
-    .select('*')
-    console.log(user)
-    res.body = user
-    return res.status(200).json({ user });
+        } else {
+            return res.status(400).json({ error: "Username taken, please try again" });
+        }
+    } catch (error) {
+        console.log(error.message)
+    }
 })
 
 
@@ -39,7 +72,7 @@ app.get("/register", async(req, res) => {
 //     // TO auth user
 //     const username = req.body.username;
 //     const password = req.body.password;
-    
+
 //     try {
 //         // Check if the user exists in the database
 
@@ -76,7 +109,7 @@ app.get("/itinerary/:id", async(req, res) => {
         console.log("Start")
         console.log(itinerary)
         return res.status(200).json({ itinerary });
-        
+
     } catch (error) {
         console.log(error.message)
         res.status(500).send("Server Error");
