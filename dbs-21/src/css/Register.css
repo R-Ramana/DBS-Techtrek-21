@@ -1,0 +1,8 @@
+.h4 {
+  text-align: center;
+}
+
+.registerContainer {
+  display: flex;
+  justify-content: center;
+}
