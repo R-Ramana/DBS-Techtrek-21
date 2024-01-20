@@ -66,6 +66,7 @@ const Iternaries = () => (
     <div className = 'header'>
       <h1>My Iternaries</h1> 
       <Link className = 'login-button' to="/CreateIt">Create New Itinerary</Link>
+      <Link className = 'login-button' to="/CreateD">Create New Destination</Link>
     </div>
 
     <Dashboard cards={cardsData} />
