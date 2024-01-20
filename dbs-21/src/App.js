@@ -41,7 +41,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Itinerary itinerary={itinerary} onDelete={deleteItinerary}></Itinerary>
-        <h1> {itinerary.title} </h1>
       </header>
     </div>
   );
