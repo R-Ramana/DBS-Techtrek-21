@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Link, redirect } from "react-router-dom";
+import { Link, redirect,useNavigate } from "react-router-dom";
 import "../css/Login.css";
 import axios from "axios";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
+  
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
   };
@@ -15,7 +16,11 @@ const Login = () => {
   };
 
   const handleSubmit = () => {
-    redirect("/dashboard");
+    localStorage.setItem('username',username);
+    console.log(username);
+
+    navigate("/iternaries");
+    // redirect("/iternaries");
   };
 
   return (
@@ -33,7 +38,7 @@ const Login = () => {
         name="password"
         onChange={handlePasswordChange}
       ></input>
-      <button type="submit">Login</button>
+      <button type="submit" onClick={handleSubmit}>Login</button>
       <p>
         Not a member?
         <Link to="/register">Register Here</Link>

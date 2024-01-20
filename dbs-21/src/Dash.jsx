@@ -1,5 +1,6 @@
-import React from 'react';
+
 import './Dash.css'; // Make sure to import the CSS f
+import React, { useState, useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom';
 // Card component
 import logo from './logo.svg';
@@ -21,6 +22,7 @@ const Card = ({ image, title, budget,listOfDesti }) => (
 
 // Dashboard component
 const Dashboard = ({ cards }) => (
+  // console.log()
   <div className="dashboard">
     {cards.map((card, index) => (
       <Card key={index} image={card.image} title={card.title} budget={card.title} listOfDesti={card.listOfDesti}/>
@@ -74,12 +76,21 @@ const cardsData = [
 ];
 
 // Main App component
-const Iternaries = () => (
-  
-  <div className="app">
-    <h1>My Iternaries</h1>
-    <Dashboard cards={cardsData} />
-  </div>
-);
+const Iternaries = () => {
+ 
+  useEffect(() => {
+    console.log('Iternaries page is displayed');
+
+    // console.log(cardsData);
+    // console.log(localStorage.username)
+  }, []);
+
+  return (
+    <div className="app">
+      <h1>My Iternaries</h1>
+      <Dashboard cards={cardsData} />
+    </div>
+  );
+};
 
 export default Iternaries;
