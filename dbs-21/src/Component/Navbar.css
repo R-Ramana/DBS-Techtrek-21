@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 10vh;
+    background-color:aquamarine;
+}
+
+.navlinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 2.5vw;
+}
+
+.login-component{
+    margin-left:1vw;
+    padding:1vw;
+}
