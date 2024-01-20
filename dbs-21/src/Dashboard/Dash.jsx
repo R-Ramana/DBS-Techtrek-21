@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom';
 // Card component
 import logo from './logo.svg';
+import {Link} from 'react-router-dom';
+
 const Card = ({ image, title, budget,listOfDesti }) => (
   <div className="card" onClick={() => NavigationPreloadManager}>
     <div className="card-image-container">

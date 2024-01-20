@@ -51,7 +51,7 @@ function App() {
           <Route path = '/createD' element = {<CreateD/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/iternaries" element={<Iternaries/>} />
+          <Route path="/" element={<Iternaries/>} />
           <Route path="/itinerary" element={<Itinerary itinerary={itinerary}/>}/>
         </Routes>
   </div>
