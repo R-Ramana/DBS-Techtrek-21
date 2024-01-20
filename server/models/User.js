@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define("Posts", {
+  const User = sequelize.define("User", {
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -17,5 +17,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
+  User.associate = (models) => {
+    User.hasMany(models.Itinerary, {
+      onDelete: "cascade", //if we delete a post, it will delete all the comments related to that post
+    });
+  };
   return User;
 };
