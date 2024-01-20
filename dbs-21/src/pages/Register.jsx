@@ -61,8 +61,10 @@ const Register = () => {
     };
     axios
       .post("http://localhost:3001/register", data)
-      .then(() => {
+      .then((res) => {
+        console.log(res);
         alert("Account created successfully");
+        redirect('/login')
       })
       .catch((err) => {
         alert("something went wrong");

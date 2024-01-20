@@ -31,7 +31,7 @@ const CreateIt=()=>{
     
       const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(itData)
+        console.log(JSON.stringify({"itineraryItems":[itData]}))
     
         try {
           const response = await fetch('http://localhost:3001/itinerary/1', {
@@ -41,7 +41,7 @@ const CreateIt=()=>{
               apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt2aGhpYXl1emtwc2p4dnp1dnZsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDU3MDg2MDksImV4cCI6MjAyMTI4NDYwOX0.cyhiinfoCYzCCx0IX6ns8Spcs2UOy7WR-W95aqHJqUE",
               Authorization:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt2aGhpYXl1emtwc2p4dnp1dnZsIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNTcwODYwOSwiZXhwIjoyMDIxMjg0NjA5fQ.eOaqXI8bq6KgtlC8m2WgMD3QllcWQJF2cFlN3mn1UxU"
             },
-            body: JSON.stringify(itData),
+            body: JSON.stringify({"itineraryItems":[itData]}),
           });
     
           if (response.ok) {

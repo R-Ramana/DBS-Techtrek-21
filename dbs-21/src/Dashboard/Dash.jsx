@@ -26,7 +26,7 @@ const Dashboard = ({ cards }) => (
   // console.log()
   <div className="dashboard">
     {cards.map((card, index) => (
-      <Card key={index} image={card.image} title={card.title} budget={card.title} listOfDesti={card.listOfDesti} id = {card.id}/>
+      <Card key={index} image={card.image} title={card.id} budget={card.title} listOfDesti={card.listOfDesti} id = {card.id}/>
     ))}
   </div>
 );

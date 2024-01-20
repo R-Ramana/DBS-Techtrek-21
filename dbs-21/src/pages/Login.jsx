@@ -19,7 +19,7 @@ const Login = () => {
     localStorage.setItem('username',username);
     console.log(username);
 
-    navigate("/iternaries");
+    navigate("/");
     // redirect("/iternaries");
   };
 
