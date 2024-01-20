@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom';
 // Card component
 import logo from './logo.svg';
+import {Link} from 'react-router-dom';
+
 const Card = ({ image, title, budget,listOfDesti }) => (
   <div className="card" onClick={() => NavigationPreloadManager}>
     <div className="card-image-container">
@@ -72,22 +74,21 @@ const cardsData = [
   // Add more cards as needed
 ];
 // Main App component
-const Iternaries = async() => {
-  const [card, setCardData]=useState([]);
+const Iternaries = () => {
+ 
+  useEffect(() => {
+    console.log('Iternaries page is displayed');
 
-  
-  
+    // console.log(cardsData);
+    // console.log(localStorage.username)
+  }, []);
+
   return (
-  <div className="app">
-    <div className = 'header'>
-      <h1>My Iternaries</h1> 
-      <Link className = 'login-button' to="/CreateIt">Create New Itinerary</Link>
-      <Link className = 'login-button' to="/CreateD">Create New Destination</Link>
+    <div className="app">
+      <h1>My Iternaries</h1>
+      <Dashboard cards={cardsData} />
     </div>
-
-    <Dashboard cards={cardsData} />
-  </div>
-  )
-  };
+  );
+};
 
 export default Iternaries;
