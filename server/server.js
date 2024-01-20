@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv')
 const crypto = require('crypto')
 
@@ -32,7 +32,7 @@ app.post('/register', async(req, res) => {
         const salt = crypto.randomBytes(128).toString('base64');
         const hash_password = crypto.pbkdf2Sync(password, salt, 10000, 512, 'sha512');
 
-        // Create a new user in the database
+        // Create a new user in the database with all info including salt
 
 
         return res.status(201).json({ message: 'User registered successfully' });
@@ -54,18 +54,33 @@ app.post('/login', async(req, res) => {
 
         if (!user) {
             return res.status(401).json({ error: 'Invalid credentials' });
-
         }
-    } catch (err) {
 
+        // Compare the provided password with the hashed password
+        // get salt from db, then compare with hashed pw
+        const encryptHash = crypto.pbkdf2Sync(password, salt, 10000, 512, 'sha512');
+        // compare encryptHash with pw
+
+        if (!passwordMatch) {
+            return res.status(401).json({ error: 'Invalid credentials' });
+        }
+
+        // Generate a JWT for the authenticated user
+        // get token and send to db
+        // const access_token = jwt.sign(process.env.ACCESS_SECRET_TOKEN)
+        // jwt.sign({ username: username, password: password }, access_token)
+        // return res.status(200).json({ token });
+
+
+    } catch (err) {
+        return res.status(500).json({ error: 'Internal server error' });
     }
 });
 
 
 
 
-// get token
-const access_token = jwt.sign(process.env.ACCESS_SECRET_TOKEN)
+
 
 // app.get('/user/data', checkToken, (req, res) => {
 //     //verify the JWT token generated for the user
@@ -83,11 +98,14 @@ const access_token = jwt.sign(process.env.ACCESS_SECRET_TOKEN)
 //             console.log('SUCCESS: Connected to protected route');
 //         }
 //     })
+// });
+
+app.listen(PORT, () => {
+    console.log(`Example app listening on port ${PORT}`);
 });
 
-
-db.sequelize.sync().then(() => {
-    app.listen(PORT, () => {
-        console.log(`Example app listening on port ${PORT}`);
-    });
-});
+// db.sequelize.sync().then(() => {
+//     app.listen(PORT, () => {
+//         console.log(`Example app listening on port ${PORT}`);
+//     });
+// });
