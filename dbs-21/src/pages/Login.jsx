@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -9,10 +11,6 @@ const Login = () => {
   };
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-  };
-
-  const loginBtn = (e) => {
-    e.preventDefault();
   };
 
   return (
@@ -33,7 +31,10 @@ const Login = () => {
       <button type="submit" onClick={loginBtn}>
         Login
       </button>
-      <p>Not a member?</p>
+      <p>
+        Not a member?
+        <Link to="/register">Register Here</Link>
+      </p>
     </div>
   );
 };
