@@ -25,7 +25,7 @@ const Register = () => {
     setConfirmPassword(e.target.value);
   };
 
-  const validatePasswords = (e) => {
+  const validateForm = (e) => {
     e.preventDefault();
     const input = {
       first_name: firstName,
@@ -34,6 +34,15 @@ const Register = () => {
       password: password,
       confirmPassword: confirmPassword,
     };
+
+    if (
+      !input.first_name ||
+      !input.last_name ||
+      !input.username ||
+      !input.password
+    ) {
+      alert("First Name, Last Name, Username and Password cannot be blank!");
+    }
 
     if (input.password !== input.confirmPassword) {
       alert("Passwords do not match!");
@@ -47,7 +56,7 @@ const Register = () => {
   return (
     <div>
       <h4>Register</h4>
-      <form onSubmit={validatePasswords}>
+      <form onSubmit={validateForm}>
         <label>First Name</label>
         <input
           type="text"
