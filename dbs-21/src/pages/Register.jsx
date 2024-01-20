@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import axios from "axios";
 
 const Register = () => {
@@ -54,7 +54,7 @@ const Register = () => {
   const handleSubmit = () => {};
 
   return (
-    <div>
+    <div className="registerContainer">
       <h4>Register</h4>
       <form onSubmit={validateForm}>
         <label>First Name</label>

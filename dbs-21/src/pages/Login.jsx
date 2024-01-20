@@ -13,6 +13,10 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
+  const handleSubmit = () => {
+    redirect("/dashboard");
+  };
+
   return (
     <div className="loginContainer">
       <h4>Login</h4>
