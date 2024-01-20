@@ -3,8 +3,9 @@ const router = express.Router();
 const { User } = require("../models");
 
 router.get("/", async (req, res) => {
-  const listOfPosts = await User.findAll();
-  res.json(listOfPosts);
+  // const listOfPosts = await User.findAll();
+  // res.json(listOfPosts);
+  res.json("success");
 });
 
 router.get("/byId/:id", async (req, res) => {
@@ -20,9 +21,11 @@ router.post("/123", async (req, res) => {
     const post = req.body;
     //this body data should have the same format as our
     //Post.js format in
+    // res.json("123")
     await User.create(post);
     //sequelize is called here to create and insert that object into db
-    res.json(post);
+    res.json(req.body);
+    //res.json(post);
   } catch (error) {
     res.send(error);
   }
