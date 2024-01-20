@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Dash.css'; // Make sure to import the CSS f
 // import { useNavigate } from 'react-router-dom';
 // Card component
 import logo from './logo.svg';
 import {Link} from 'react-router-dom';
+import Modal from '../Component/Modal.jsx';
 
 
 const Card = ({ image, title }) => (
@@ -60,8 +61,18 @@ const cardsData = [
 ];
 
 // Main App component
-const Iternaries = () => (
+const Iternaries = () => {
+  const [open, setOpen] = useState(false);
+ 
+  const handleClose = () => {
+    setOpen(false);
+  };
+   
+  const handleOpen = () => {
+    setOpen(true);
+  };
   
+  return (
   <div className="app">
     <div className = 'header'>
       <h1>My Iternaries</h1> 
@@ -71,6 +82,7 @@ const Iternaries = () => (
 
     <Dashboard cards={cardsData} />
   </div>
-);
+  )
+  };
 
 export default Iternaries;

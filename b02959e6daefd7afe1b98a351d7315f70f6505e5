@@ -1,0 +1,268 @@
+[33mcommit b02959e6daefd7afe1b98a351d7315f70f6505e5[m[33m ([m[1;36mHEAD -> [m[1;32mfront-end[m[33m, [m[1;31morigin/front-end[m[33m)[m
+Merge: 73dbb2f f6264df
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 14:14:39 2024 +0800
+
+    Merge branch 'itinerary' of https://github.com/R-Ramana/TT1_21 into front-end
+
+[33mcommit 73dbb2fe10858a931a2648c1390b1454aff348e1[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 14:08:00 2024 +0800
+
+    add new destination
+
+[33mcommit f6264df95ae37b75aa399239aa0710894c8fa3b9[m[33m ([m[1;31morigin/itinerary[m[33m)[m
+Author: iamhannah <hereismytrashbin@gmail.com>
+Date:   Sat Jan 20 14:01:50 2024 +0800
+
+    destination and itinerary push
+
+[33mcommit 0ecd3e95a2167a951bda047131e869bfdf7cd9de[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 13:34:01 2024 +0800
+
+    changed color of buttons
+
+[33mcommit 9ab8ba81b1580c7aa96aa0928b3011be88f08e03[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 13:22:40 2024 +0800
+
+    changed routing
+
+[33mcommit aef9237632444d45299fb42541161818e69b52ba[m
+Merge: ae8dc16 f09312f
+Author: iamhannah <hereismytrashbin@gmail.com>
+Date:   Sat Jan 20 13:11:41 2024 +0800
+
+    Merge branch 'magdalene' into itinerary
+
+[33mcommit ae8dc16bce46fc0e9616ea7a1ea403b39d5e804b[m
+Author: iamhannah <hereismytrashbin@gmail.com>
+Date:   Sat Jan 20 13:06:14 2024 +0800
+
+    changed the background colour
+
+[33mcommit f09312fbef0e917496a0c75793cca9581eec7bb1[m[33m ([m[1;31morigin/magdalene[m[33m, [m[1;32mmagdalene[m[33m)[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 12:59:33 2024 +0800
+
+    removed unused dashboard
+
+[33mcommit 711056c7ec3b02e70dd18ebcc6e0413a9e399162[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 12:58:06 2024 +0800
+
+    test
+
+[33mcommit bbb1fd4ab28f6ed4286777737a31758d537e7905[m
+Author: iamhannah <hereismytrashbin@gmail.com>
+Date:   Sat Jan 20 12:46:03 2024 +0800
+
+    update itinerary.jsx
+
+[33mcommit ae260e0f6f0a366d5677664e1e9f7b62e19a2bc1[m
+Merge: 22f1935 62b80c3
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 12:45:09 2024 +0800
+
+    merged itinerary
+
+[33mcommit 62b80c3da843e3e1383069ae9b546c2bb30273b7[m
+Author: iamhannah <hereismytrashbin@gmail.com>
+Date:   Sat Jan 20 12:41:10 2024 +0800
+
+    changed from js to jsx
+
+[33mcommit 22f1935d2721dae31684ffd25537ce82f19ae5e1[m
+Merge: 0d4fdbd d8c0660
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 12:39:51 2024 +0800
+
+    Merge branch 'dash' of https://github.com/R-Ramana/TT1_21 into magdalene
+
+[33mcommit 0d4fdbdacb27eff0c77e71e2e9b93be148871561[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 12:36:07 2024 +0800
+
+    merged with login
+
+[33mcommit d8c06600ef623d986421e9d04d717a7ac311416a[m[33m ([m[1;31morigin/dash[m[33m)[m
+Author: valeriewoon <valeriewoon.2020@scis.smu.edu.sg>
+Date:   Sat Jan 20 12:32:28 2024 +0800
+
+    change file extensions
+
+[33mcommit 673c4d5c46806e25ecb7aa7a119bf0c595a9eef9[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 12:22:05 2024 +0800
+
+    merged login and sign up
+
+[33mcommit c66bb68ed637a226c6f23178eb218313fdaae259[m
+Merge: dec44a7 b0c76b6
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 12:21:49 2024 +0800
+
+    Merge branch 'magdalene' of https://github.com/R-Ramana/TT1_21 into magdalene
+
+[33mcommit b0c76b6cb82f1a63781f688005a0803352a685b7[m
+Author: magdalenelkh <magdalenelkh@gmail.com>
+Date:   Sat Jan 20 12:12:08 2024 +0800
+
+    update css
+
+[33mcommit dec44a79b86224e88332af37931bfe910acde05e[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 11:59:41 2024 +0800
+
+    merge itinery branch
+
+[33mcommit b6f22f5cf07895f1b9b00b8d88b6cb4ff742e1c9[m
+Merge: 7da857d b6be899
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 11:58:51 2024 +0800
+
+    Merge remote-tracking branch 'origin/itinerary' into front-end
+
+[33mcommit c05a92b3943948213aae28fc75980144538c6972[m
+Author: valeriewoon <valeriewoon.2020@scis.smu.edu.sg>
+Date:   Sat Jan 20 11:55:26 2024 +0800
+
+    rename files
+
+[33mcommit 2645fd0b4d41b248171b1ce5dccb98de8eebff45[m[33m ([m[1;31morigin/shaan/itin[m[33m)[m
+Author: iamhannah <hereismytrashbin@gmail.com>
+Date:   Sat Jan 20 11:51:39 2024 +0800
+
+    added add/edit buttons to the pages
+
+[33mcommit 2cf3b3bf27fc5c5763d162ddde96ff3e4c838794[m
+Author: magdalenelkh <magdalenelkh@gmail.com>
+Date:   Sat Jan 20 11:50:45 2024 +0800
+
+    updated error
+
+[33mcommit 607d6cf4cfd8c7b97127cd933edcff04874b6989[m
+Author: magdalenelkh <magdalenelkh@gmail.com>
+Date:   Sat Jan 20 11:50:22 2024 +0800
+
+    added redirect links
+
+[33mcommit 03f9943d5bbf6e97bbffabf35a32f378cd7c03fc[m
+Author: magdalenelkh <magdalenelkh@gmail.com>
+Date:   Sat Jan 20 11:44:28 2024 +0800
+
+    updated validation
+
+[33mcommit 3e34ecb785ae27b16363bdb8eac628523410d9bf[m
+Author: valeriewoon <valeriewoon.2020@scis.smu.edu.sg>
+Date:   Sat Jan 20 11:43:47 2024 +0800
+
+    dashboard of iternary page
+
+[33mcommit 4edb30f0b1f9676c5dd6b7a1c9d8a4295cc5c296[m
+Author: magdalenelkh <magdalenelkh@gmail.com>
+Date:   Sat Jan 20 11:41:18 2024 +0800
+
+    added password validation to register page
+
+[33mcommit 7da857db3670539544dedf3bb50974dc3d682d22[m[33m ([m[1;32mcreateNew[m[33m)[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 11:35:31 2024 +0800
+
+    added sample data for select
+
+[33mcommit e7bb7000748c89ef6bc6a703e762c83bb2ee0788[m
+Author: magdalenelkh <magdalenelkh@gmail.com>
+Date:   Sat Jan 20 11:28:01 2024 +0800
+
+    added links and routing
+
+[33mcommit 5fc513bcfdcc400f0a8aeee881aec35294d5eb9d[m
+Author: Ramana <ramanalfc@yahoo.com.sg>
+Date:   Sat Jan 20 11:27:06 2024 +0800
+
+    update salt for user
+
+[33mcommit fea86525222cf2cf1787b40fdf3fce6d6b4198a9[m
+Author: magdalenelkh <magdalenelkh@gmail.com>
+Date:   Sat Jan 20 11:22:37 2024 +0800
+
+    added routing and links
+
+[33mcommit b97974061971cb31a78546a896148e55ba9357c6[m
+Author: iamhannah <hereismytrashbin@gmail.com>
+Date:   Sat Jan 20 11:17:31 2024 +0800
+
+    listed down destinations and itineraries
+
+[33mcommit da5512c0510b1e0245f9f83759fc57b80be8117f[m
+Author: Hanzhi <Hanzhi100@outlook.com>
+Date:   Sat Jan 20 11:13:39 2024 +0800
+
+    update nodemon package
+
+[33mcommit fcb6f4847a5bc64ad065cb21960487182dd4493b[m
+Author: Ramana <ramanalfc@yahoo.com.sg>
+Date:   Sat Jan 20 11:09:10 2024 +0800
+
+    server:reg & login api
+
+[33mcommit 7b83032bcb3ea1efe0f35be749ba2d06b7bf5c5a[m[33m ([m[1;31morigin/createNew[m[33m)[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 11:05:50 2024 +0800
+
+    create new itinery page
+
+[33mcommit ec62093048d466c7c7c0c103b64c4b59279ad1d7[m
+Author: magdalenelkh <magdalenelkh@gmail.com>
+Date:   Sat Jan 20 11:02:32 2024 +0800
+
+    login and register skeleton
+
+[33mcommit 0ce2002a52018874a72fd83d4bcf67bc3d7076df[m
+Author: Shaan Walia <mxixqc@gmail.com>
+Date:   Sat Jan 20 11:01:37 2024 +0800
+
+    Create .gitignore
+
+[33mcommit 77ec65cda914585db5036b1cd0723a1f27655d28[m
+Author: Shaan Walia <mxixqc@gmail.com>
+Date:   Sat Jan 20 11:01:15 2024 +0800
+
+    Update .gitignore
+
+[33mcommit 89f98dd09406f87ce76b5edd72584ad53361b7f3[m
+Merge: 7219642 16ebf8f
+Author: Ramana <ramanalfc@yahoo.com.sg>
+Date:   Sat Jan 20 10:48:51 2024 +0800
+
+    server:fix merge conflict
+
+[33mcommit 72196424e62a37b88494ab0c0b3f9282b3f73001[m
+Author: Ramana <ramanalfc@yahoo.com.sg>
+Date:   Sat Jan 20 10:44:48 2024 +0800
+
+    server:register user [incomplete]
+
+[33mcommit c87be3315d91e3ee398ee00a5b0935761fa42ebc[m
+Author: Jiang Nuoyi <jiangnuoyi1999@gmail.com>
+Date:   Sat Jan 20 10:43:35 2024 +0800
+
+    created navbar
+
+[33mcommit 16ebf8fb28356cdfff522f66e11448c7ff57f92c[m
+Merge: eec1283 cdc5072
+Author: Hanzhi <Hanzhi100@outlook.com>
+Date:   Sat Jan 20 10:31:47 2024 +0800
+
+    Merge branch 'main' of https://github.com/R-Ramana/DBS-Techtrek-21
+
+[33mcommit eec1283dd7226709fc35365937222b3a9af89c47[m
+Author: Hanzhi <Hanzhi100@outlook.com>
+Date:   Sat Jan 20 10:31:43 2024 +0800
+
+    add Itinerary model
+
+[33mcommit cdc5072e92e61f85f7281b5f219764ae9bdde11d[m
+Merge: 7d
