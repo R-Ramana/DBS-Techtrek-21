@@ -6,6 +6,7 @@ const express = require('express')
 const app = express()
 
 const db = require("./models");
+const { User } = require("./models/User");
 
 const PORT = 3001;
 
@@ -23,6 +24,7 @@ app.post('/register', async(req, res) => {
 
     try {
         // Check if the user already exists
+        const existingUser = await User.findOne();
 
         if (existingUser) {
             return res.status(400).json({ error: 'Username already exists, choose a new name or sign in.' });
@@ -33,7 +35,13 @@ app.post('/register', async(req, res) => {
         const hash_password = crypto.pbkdf2Sync(password, salt, 10000, 512, 'sha512');
 
         // Create a new user in the database with all info including salt
-
+        User.create({
+            first_name: firstname,
+            last_name: lastname,
+            username: username,
+            password: hash_password,
+            salt: salt
+        })
 
         return res.status(201).json({ message: 'User registered successfully' });
 
