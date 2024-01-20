@@ -6,12 +6,20 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: hsl(100, 10%, 94%);
     text-align: left;
+    margin: auto;
+    width : 80%
   }
   
   .destination-card h2 {
     font-size: 2rem;
     margin-bottom: 8px;
     color: #1b1c27;
+  }
+
+  .destination-image {
+    height: 300px;
+    width: 300px;
+    float: right;
   }
   
   .destination-card h3 {
