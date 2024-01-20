@@ -25,48 +25,65 @@ const Register = () => {
     setConfirmPassword(e.target.value);
   };
 
-  const validatePasswords = () => {};
+  const validatePasswords = (e) => {
+    e.preventDefault();
+    const input = {
+      first_name: firstName,
+      last_name: lastName,
+      username: username,
+      password: password,
+      confirmPassword: confirmPassword,
+    };
+
+    if (input.password !== input.confirmPassword) {
+      alert("Passwords do not match!");
+    } else if (input.password.length < 7 || input.password.length > 20) {
+      alert("Passwords must be 7 to 20 characters long");
+    }
+  };
 
   const handleSubmit = () => {};
 
   return (
     <div>
       <h4>Register</h4>
-      <label>First Name</label>
-      <input
-        type="text"
-        name="first_name"
-        onChange={handleFirstNameChange}
-      ></input>
-      <label>Last Name</label>
-      <input
-        type="text"
-        name="last_name"
-        onChange={handleLastNameChange}
-      ></input>
-      <label>Username</label>
-      <input
-        type="text"
-        name="username"
-        onChange={handleUserNameChange}
-      ></input>
-      <label>Password</label>
-      <input
-        type="password"
-        name="password"
-        onChange={handlePasswordChange}
-      ></input>
-      <label>Confirm Password</label>
-      <input
-        type="password"
-        name="confirmPassword"
-        onChange={handleConfirmPasswordChange}
-      ></input>
-      <button type="submit">Register</button>
-      <p>
-        Already a member?
-        <Link to="/login">Login Here</Link>
-      </p>
+      <form onSubmit={validatePasswords}>
+        <label>First Name</label>
+        <input
+          type="text"
+          name="first_name"
+          onChange={handleFirstNameChange}
+        ></input>
+        <label>Last Name</label>
+        <input
+          type="text"
+          name="last_name"
+          onChange={handleLastNameChange}
+        ></input>
+        <label>Username</label>
+        <input
+          type="text"
+          name="username"
+          onChange={handleUserNameChange}
+        ></input>
+        <label>Password</label>
+        <input
+          type="password"
+          name="password"
+          onChange={handlePasswordChange}
+        ></input>
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          onChange={handleConfirmPasswordChange}
+        ></input>
+        <button type="submit">Register</button>
+        <p>
+          Already a member?
+          <Link to="/login">Login Here</Link>
+        </p>
+      </form>
     </div>
   );
 };
