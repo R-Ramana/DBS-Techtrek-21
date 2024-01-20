@@ -38,7 +38,6 @@ app.post("/register", async(req, res) => {
             console.log(error.message)
             throw error
         }
-        console.log(user)
         if (user.length == 0) {
             try {
                 console.log("inserting data")
@@ -46,14 +45,13 @@ app.post("/register", async(req, res) => {
                     .from('user')
                     .insert([
                         { first_name: fname, last_name: lname, username: username, password: pw },
-                    ])
-                    .select()
-                console.log('data added')
-                return res.status(200);
+                    ]).select()
                 if (error) {
                     console.log(error.message)
                     throw error
                 }
+                console.log('data added')
+                return res.status(200).json({ data });
             } catch (error) {
                 console.log(error.message)
             }
