@@ -1,0 +1,14 @@
+.itinery_form{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.itinery_line{
+    padding: 1vw;
+}
+
+.itinery_dropdown{
+    padding:1vw;
+    
+}
