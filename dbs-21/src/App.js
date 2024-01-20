@@ -1,15 +1,29 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import {Routes, Route} from 'react-router-dom';
+import './App.css';
+import NavBar from './Component/Navbar.jsx';
+import CreateIt from './Dashboard/CreateIt.jsx';
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import { Routes, Route } from "react-router-dom";
+import Iternaries from './Dash.jsx';
+import Itinerary from './components/Itinerary'
 
+import {useState, useEffect} from 'react'
 function App() {
+    const deleteItinerary = (id) => {
+      console.log(id)
+    }
+
   return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-    </Routes>
+    <div className="App">
+      <NavBar/>
+        <Routes>
+          <Route path = '/' element = {<CreateIt/>}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/iternaries" element={<Iternaries/>} />
+        </Routes>
+  </div>
   );
 }
 
