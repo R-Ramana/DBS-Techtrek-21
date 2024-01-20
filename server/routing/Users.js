@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const { User } = require("../models");
+const crypto = require("crypto");
+bcrypt = require('bcrypt')
 
+const saltRounds = 10;
 
 router.get("/", async(req, res) => {
     // const listOfPosts = await User.findAll();
@@ -40,7 +43,7 @@ router.post("/register", async(req, res) => {
 
     try {
         // Check if the user already exists
-        const existingUser = await User.findOne().where(username);
+        const existingUser = await User.findOne({ where: { username: username } });
 
         if (existingUser) {
             return res.status(400).json({
@@ -48,25 +51,17 @@ router.post("/register", async(req, res) => {
             });
         }
 
+
+
         // Hash the password using crypto & salt
-        const salt = crypto.randomBytes(128).toString("base64");
-        const hash_password = crypto.pbkdf2Sync(
-            password,
-            salt,
-            10000,
-            512,
-            "sha512"
-        );
-
-        console.log("pw hashed")
-
-        // Create a new user in the database with all info including salt
-        User.create({
-            first_name: firstname,
-            last_name: lastname,
-            username: username,
-            password: hash_password,
-            salt: salt,
+        bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
+            // Create a new user in the database with all info including salt
+            User.create({
+                first_name: firstname,
+                last_name: lastname,
+                username: username,
+                password: hash,
+            });
         });
 
         return res.status(201).json({ message: "User registered successfully" });
