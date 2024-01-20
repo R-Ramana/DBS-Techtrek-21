@@ -5,8 +5,8 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import {Link} from 'react-router-dom';
 
-const Card = ({ image, title, budget,listOfDesti }) => (
-  <div className="card" onClick={() => NavigationPreloadManager}>
+const Card = ({ image, title, budget,listOfDesti, id }) => (
+  <Link className="card" to={`/itinerary/${id}`}>
     <div className="card-image-container">
       <img src={`${title}.jpg`} alt={title} className="card-image" />
     </div>
@@ -18,7 +18,7 @@ const Card = ({ image, title, budget,listOfDesti }) => (
         <li>List of Destinations included :{listOfDesti} </li>
       </ul>
     </div>
-  </div>
+  </Link>
 );
 
 // Dashboard component
@@ -26,7 +26,7 @@ const Dashboard = ({ cards }) => (
   // console.log()
   <div className="dashboard">
     {cards.map((card, index) => (
-      <Card key={index} image={card.image} title={card.title} budget={card.title} listOfDesti={card.listOfDesti}/>
+      <Card key={index} image={card.image} title={card.title} budget={card.title} listOfDesti={card.listOfDesti} id = {card.id}/>
     ))}
   </div>
 );
@@ -103,7 +103,13 @@ const Iternaries = () => {
 
   return (
     <div className="app">
-      <h1>My Iternaries</h1>
+      <div>
+        <h1>My Iternaries</h1>
+        <div>
+          <Link className='add-button' to='./createIt'>Add New Itinerary</Link>
+        </div>
+      </div>
+      
       <Dashboard cards={cData} />
     </div>
   );

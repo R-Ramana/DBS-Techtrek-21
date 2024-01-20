@@ -1,5 +1,6 @@
-import React from 'react'
-import Destination from './Destination'
+import React from 'react';
+import Destination from './Destination';
+import {Link} from 'react-router-dom';
 import './Itinerary.css';
 
 const Itinerary = ({itinerary, addDestination, onDelete, onEdit}) => {
@@ -16,7 +17,7 @@ const Itinerary = ({itinerary, addDestination, onDelete, onEdit}) => {
     {itinerary.destinations.map((destination, index) => (
         <Destination key={index} destination={destination} onDelete={onDelete} onEdit={onEdit} />
        ))} 
-       <button className="add-button" onClick={addDestination}> Add Destination</button>
+       <Link className="add-button" onClick={addDestination}> Add Destination</Link>
        <button className="edit-button" onClick={onEdit}> Edit Itinerary </button>
       <button className= "delete-button" onClick={onDelete}> Delete Itinerary </button>
     </div>

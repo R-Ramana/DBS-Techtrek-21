@@ -42,7 +42,7 @@ function App() {
     const deleteItinerary = (id) => {
       console.log(id)
     }
-
+    const id = 1;
   return (
     <div className="App">
       <NavBar/>
@@ -51,8 +51,9 @@ function App() {
           <Route path = '/createD' element = {<CreateD/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/iternaries" element={<Iternaries/>} />
+          <Route path="/" element={<Iternaries/>} />
           <Route path="/itinerary" element={<Itinerary itinerary={itinerary}/>}/>
+          <Route path = {`/itinerary/${id}`} element = {<Itinerary itinerary={itinerary}/>}/>
         </Routes>
   </div>
   );
