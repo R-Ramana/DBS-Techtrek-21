@@ -63,8 +63,11 @@ const cardsData = [
 const Iternaries = () => (
   
   <div className="app">
-    <h1>My Iternaries</h1> 
-    <Link className = 'login-button' to="/CreateIT">Create New Itinerary</Link>
+    <div className = 'header'>
+      <h1>My Iternaries</h1> 
+      <Link className = 'login-button' to="/CreateIt">Create New Itinerary</Link>
+    </div>
+
     <Dashboard cards={cardsData} />
   </div>
 );

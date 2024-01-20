@@ -9,6 +9,18 @@
     justify-content: center;
     gap: 20px;
   }
+
+  .header{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .header .login-button{
+    height:50%;
+    width: 10vw;
+  }
   
   .card {
     border: 1px solid #ddd;

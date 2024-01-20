@@ -11,7 +11,7 @@ function NavBar (){
                 </a>
                 <form className = 'login-component' action="/login-page">
                     <Link className = 'login-button' to="/login">Log in</Link>
-                    <button className = 'login-button'>Register</button>
+                    <Link className = 'login-button' to="/register">Register</Link>
                     <button className = 'login-button'>Log out</button>
                 </form>
             </div>
