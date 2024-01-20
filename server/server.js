@@ -29,7 +29,8 @@ app.get("/register", async(req, res) => {
     .from('user')
     .select('*')
     console.log(user)
-    return user;
+    res.body = user
+    return res.status(200).json({ user });
 })
 
 // app.post("/login", async(req, res) => {
