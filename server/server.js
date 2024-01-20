@@ -64,6 +64,37 @@ app.post("/register", async(req, res) => {
     }
 })
 
+app.get('/login', async(req,res) => {
+    const username = req.query.username;
+    const password = req.query.password;
+    console.log(username);
+    console.log(password);
+
+    const { data: users, error } = await supabase
+  .from('user')
+  .select('id') // Replace with the actual columns you want to retrieve
+  .eq('username', username)
+  .eq('password', password);
+
+  console.log(users);
+
+    if (error) {
+    // Handle the error
+    console.error('Error fetching user:', error.message);
+    return res.status(500).json({ error: 'Internal Server Error' });
+    }
+
+    if (users && users.length > 0) {
+    // User with the given username exists
+    console.log('User found:', users[0]);
+    return res.status(200).json({ user: users[0] });
+    } else {
+    // User with the given username not found
+    console.log('User not found');
+    return res.status(404).json({ error: 'User not found' });
+    }
+})
+
 
 
 // app.post("/login", async(req, res) => {
