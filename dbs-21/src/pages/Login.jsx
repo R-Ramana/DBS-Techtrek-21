@@ -21,23 +21,25 @@ const Login = () => {
   return (
     <div className="loginContainer">
       <h4>Login</h4>
-      <label>Username</label>
-      <input
-        type="text"
-        name="username"
-        onChange={handleUsernameChange}
-      ></input>
-      <label>Password</label>
-      <input
-        type="password"
-        name="password"
-        onChange={handlePasswordChange}
-      ></input>
-      <button type="submit">Login</button>
-      <p>
-        Not a member?
-        <Link to="/register">Register Here</Link>
-      </p>
+      <form>
+        <label>Username</label>
+        <input
+          type="text"
+          name="username"
+          onChange={handleUsernameChange}
+        ></input>
+        <label>Password</label>
+        <input
+          type="password"
+          name="password"
+          onChange={handlePasswordChange}
+        ></input>
+        <button type="submit">Login</button>
+        <p>
+          Not a member?
+          <Link to="/register">Register Here</Link>
+        </p>
+      </form>
     </div>
   );
 };

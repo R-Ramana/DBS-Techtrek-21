@@ -88,12 +88,14 @@ const Register = () => {
           name="confirmPassword"
           onChange={handleConfirmPasswordChange}
         ></input>
-        <button type="submit">Register</button>
-        <p>
-          Already a member?
-          <Link to="/login">Login Here</Link>
-        </p>
+        <button className="btn" type="submit">
+          Register
+        </button>
       </form>
+      <p>
+        Already a member?
+        <Link to="/login">Login Here</Link>
+      </p>
     </div>
   );
 };
