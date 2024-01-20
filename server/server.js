@@ -5,12 +5,14 @@ const crypto = require('crypto')
 const express = require('express')
 const app = express()
 
-const PORT = 3000
+const db = require("./models");
+
+const PORT = 3001;
 
 // respond with "hello world" when a GET request is made to the homepage - test GET
-app.get('/', (req, res) => {
-    res.send('hello world')
-})
+app.get("/", (req, res) => {
+    res.send("hello world");
+});
 
 // Route for user registration
 app.post('/register', async(req, res) => {
@@ -83,6 +85,9 @@ const access_token = jwt.sign(process.env.ACCESS_SECRET_TOKEN)
 //     })
 });
 
-app.listen(PORT, () => {
-    console.log(`Example app listening on port ${PORT}`)
-})
+
+db.sequelize.sync().then(() => {
+    app.listen(PORT, () => {
+        console.log(`Example app listening on port ${PORT}`);
+    });
+});
