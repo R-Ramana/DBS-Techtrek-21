@@ -2,15 +2,22 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
-    margin: 16px;
+    margin-bottom: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: hsl(100, 10%, 94%);
+    text-align: left;
   }
   
+  .destination-card h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #1b1c27;
+  }
   
   .destination-card h3 {
     font-size: 1.5rem;
     margin-bottom: 8px;
+    color: #1b1c27;
   }
   
   .destination-card p {
@@ -34,7 +41,7 @@
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;
-  margin: 0;
+  margin: centre;
   min-height: 3rem;
   padding: calc(.875rem - 1px) calc(1.5rem - 1px);
   position: relative;
@@ -45,6 +52,7 @@
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
+  margin: 0 auto;
 }
 
 .delete-button {
@@ -74,6 +82,7 @@
     touch-action: manipulation;
     vertical-align: baseline;
     width: auto;
+    margin: 0 auto;
   }
 
 .edit-button :hover,
@@ -94,4 +103,9 @@
   
   .delete-button:hover {
     background-color: #e04141;
+  }
+
+  .image {
+    width: 100px; /* Adjust the width of the image as needed */
+    margin-left: 16px; /* Margin to separate the image from the content */
   }
