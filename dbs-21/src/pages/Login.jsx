@@ -14,6 +14,18 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
+  const validateForm = (e) => {
+    e.preventDefault();
+    const input = {
+      username: username,
+      password: password,
+    };
+
+    if (!input.username || !input.password) {
+      alert("Username and password cannot be blank!");
+    }
+  };
+
   const handleSubmit = () => {
     redirect("/dashboard");
   };
@@ -21,7 +33,7 @@ const Login = () => {
   return (
     <div className="loginContainer">
       <h4>Login</h4>
-      <form>
+      <form onSubmit={validateForm}>
         <label>Username</label>
         <input
           type="text"
@@ -34,12 +46,14 @@ const Login = () => {
           name="password"
           onChange={handlePasswordChange}
         ></input>
-        <button type="submit">Login</button>
-        <p>
-          Not a member?
-          <Link to="/register">Register Here</Link>
-        </p>
+        <button className="btn" onClick={handleSubmit} type="submit">
+          Login
+        </button>
       </form>
+      <p>
+        Not a member?
+        <Link to="/register">Register Here</Link>
+      </p>
     </div>
   );
 };
