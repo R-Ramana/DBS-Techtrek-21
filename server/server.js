@@ -65,6 +65,7 @@ app.post("/register", async(req, res) => {
     }
 })
 
+
 app.get('/login', async(req, res) => {
     const username = req.query.username;
     const password = req.query.password;
@@ -161,9 +162,9 @@ app.post("/itinerary/delete/:id", async(req, res) => {
         const toDelete = req.body.body.toDelete
         console.log(toDelete)
         const { error } = await supabase
-        .from('itinerary')
-        .delete()
-        .eq('id', toDelete)
+            .from('itinerary')
+            .delete()
+            .eq('id', toDelete)
         if (error) {
             throw error;
         }
