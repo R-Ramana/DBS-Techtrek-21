@@ -3,8 +3,13 @@ const dotenv = require("dotenv");
 const crypto = require("crypto");
 
 const express = require("express");
+
 const app = express();
+
 app.use(express.json());
+var cors = require("cors");
+app.use(cors());
+
 const db = require("./models");
 const { User } = require("./models/User");
 
