@@ -30,8 +30,6 @@ const Dashboard = ({ cards }) => (
     ))}
   </div>
 );
-
-// Sample data for the dashboard
 const cardsData = [
   {
     image: 'e.jpg',
@@ -75,24 +73,11 @@ const cardsData = [
   },
   // Add more cards as needed
 ];
-
 // Main App component
-const Iternaries = () => {
-  const [open, setOpen] = useState(false);
- 
-  const handleClose = () => {
-    setOpen(false);
-  };
-   
-  const handleOpen = () => {
-    setOpen(true);
-  };
-  useEffect(() => {
-    console.log('Iternaries page is displayed');
+const Iternaries = async() => {
+  const [card, setCardData]=useState([]);
 
-    // console.log(cardsData);
-    // console.log(localStorage.username)
-  }, []);
+  
   
   return (
   <div className="app">
