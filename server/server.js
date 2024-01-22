@@ -16,6 +16,7 @@ app.use(cors());
 app.use(morgan("combined"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
 const PORT = 3001;
 
