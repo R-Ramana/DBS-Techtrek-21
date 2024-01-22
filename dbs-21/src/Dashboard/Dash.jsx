@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 const Card = ({ image, title, budget,listOfDesti, id }) => (
   <Link className="card" to={`/itinerary/${id}`}>
     <div className="card-image-container">
-      <img src={`${title}.jpg`} alt={title} className="card-image" />
+      <img src={`${id}.jpg`} alt={title} className="card-image" />
     </div>
     <div className="card-description">
       <h3 className="card-title">Iternary Title :  {title}</h3>
@@ -26,7 +26,7 @@ const Dashboard = ({ cards }) => (
   // console.log()
   <div className="dashboard">
     {cards.map((card, index) => (
-      <Card key={index} image={card.image} title={card.id} budget={card.title} listOfDesti={card.listOfDesti} id = {card.id}/>
+      <Card key={index} image={card.image} title={card.title} budget={card.budget} listOfDesti={card.listOfDesti} id = {card.id}/>
     ))}
   </div>
 );
